@@ -6,6 +6,19 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setCities } from '../actions';
 
+function mapStateToProps(state) {
+  return {
+    cities: state.cities
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { setCities },
+    dispatch
+  );
+}
+
 class CityList extends Component {
 
   componentWillMount() {
@@ -21,19 +34,6 @@ class CityList extends Component {
       </div>
     )
   }
-}
-
-function mapStateToProps(state) {
-  return {
-    cities: state.cities
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    { setCities },
-    dispatch
-  );
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CityList);
