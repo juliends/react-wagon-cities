@@ -10,6 +10,10 @@ import City from './city';
 
 class CityList extends Component {
 
+  componentWillMount() {
+  // TODO: dispatch an action to load flats!
+  }
+
   render(){
     return (
       <div>
