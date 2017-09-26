@@ -20,7 +20,7 @@ const initialState = {
 
 const reducers = combineReducers({
   cities: CitiesReducer,
-  activeCity: ActiveCityReducer
+  selectedCity: ActiveCityReducer
 });
 
 // render an instance of the component in the DOM

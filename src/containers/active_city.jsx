@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 
 class ActiveCity extends Component {
   render(){
-    if (this.props.activeCity === null){
+    const city = this.props.selectedCity
+    if (city === null){
       return (
         <div className='active-city'>
           <h1>Choose a city</h1>
@@ -13,7 +14,11 @@ class ActiveCity extends Component {
       )
     } else {
       return (
-        <h1>{this.props.activeCity}</h1>
+        <div className='active-city'>
+          <h1>{city.name}</h1>
+          <h2>{city.address}</h2>
+          <h3>The slug: {city.slug}</h3>
+        </div>
       )  
     }
   }
@@ -21,7 +26,7 @@ class ActiveCity extends Component {
 
 function mapStateToProps(state) {
   return {
-    activeCity: state.activeCity
+    selectedCity: state.selectedCity
   };
 }
 

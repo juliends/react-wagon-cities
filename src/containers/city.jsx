@@ -7,7 +7,7 @@ import { setActiveCity } from '../actions';
 class City extends Component {
 
   handleClick = () => {
-    this.props.setActiveCity(this.props.city.name);
+    this.props.setActiveCity(this.props.city);
   }
 
   render(){
