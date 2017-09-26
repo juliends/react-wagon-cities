@@ -2,22 +2,26 @@ import React, { Component }from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setActiveCity } from '../actions';
 
 class ActiveCity extends Component {
-
   render(){
-    return (
-      <div className='active-city'>
-        <h1>Hello</h1>
-      </div>
-    )
+    if (this.props.activeCity === null){
+      return (
+        <div className='active-city'>
+          <h1>Choose a city</h1>
+        </div>
+      )
+    } else {
+      return (
+        <h1>{this.props.activeCity}</h1>
+      )  
+    }
   }
 }
 
 function mapStateToProps(state) {
   return {
-    activeCity: state.city
+    activeCity: state.activeCity
   };
 }
 

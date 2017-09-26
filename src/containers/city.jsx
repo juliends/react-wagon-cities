@@ -6,15 +6,14 @@ import { setActiveCity } from '../actions';
 
 class City extends Component {
 
-  handleClick = (event) => {
-    console.log(this.props.city.name);
+  handleClick = () => {
     this.props.setActiveCity(this.props.city.name);
   }
 
   render(){
     return (
-      <div className='cities'>
-        <h1 onClick={this.handleClick}>{this.props.city.name}</h1>
+      <div className='cities' onClick={this.handleClick}>
+        <h1>{this.props.city.name}</h1>
       </div>
     )
   }
@@ -27,4 +26,4 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(mapDispatchToProps)(City);
+export default connect(null, mapDispatchToProps)(City);
