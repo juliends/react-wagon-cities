@@ -13,7 +13,7 @@ import ActiveCityReducer from './reducers/active_city_reducer';
 // State and reducers
 const initialState = {
   cities: []
-}
+};
 
 // initialState = JSON.parse(document.getElementsById("app").dataset.state);
 // <div id="app" data-state="{ cities: [] }" />

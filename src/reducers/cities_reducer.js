@@ -4,7 +4,7 @@ const citiesReducer = (state = null, action) => {
       return action.payload;
     default:
       return state;
-  } 
+  }
 };
 
 export default citiesReducer;
