@@ -5,7 +5,7 @@ import ActiveCity from '../containers/active_city';
 const App = () => {
   return (
     <div className="app">
-      <CityList/>
+      <CityList />
       <ActiveCity />
     </div>
   );
